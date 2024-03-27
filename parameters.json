@@ -1,0 +1,6 @@
+{
+  "NAME": "Tarifa",
+  "connectFee": "0.10",
+  "minutePrice": "0.02",
+  "percent": "20"
+}

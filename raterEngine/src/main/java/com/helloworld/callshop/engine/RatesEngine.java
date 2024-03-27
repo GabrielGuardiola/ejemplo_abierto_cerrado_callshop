@@ -23,6 +23,8 @@ public class RatesEngine {
 
     private ParametersReader consoleParametersReader;
 
+    private JsonParametersReader jsonParameterReader;
+
     private RateFactoriesContainer factoriesContainer;
 
 
@@ -38,6 +40,8 @@ public class RatesEngine {
         engine.consoleInput =  new Scanner(System.in);
 
         engine.consoleParametersReader = new ConsoleParametersReader();
+
+        engine.jsonParameterReader = new JsonParametersReader();
 
         engine.factoriesContainer = new RateFactoriesContainer();
 
@@ -74,7 +78,8 @@ public class RatesEngine {
         while (!(selectedFactory = selectRateFactory()).equalsIgnoreCase("x")) {
             RateFactory factory = factoriesContainer.getFactories().get(selectedFactory);
             try {
-                Rate rate = factory.makeRate(consoleParametersReader);
+                //Rate rate = factory.makeRate(consoleParametersReader);
+                Rate rate = factory.makeRate(jsonParameterReader);
                 RatesRepository.INSTANCE.addRate(rate);
             } catch (Exception e) {
                 System.out.println("Error al crear la tarifa: " + e.getMessage());
