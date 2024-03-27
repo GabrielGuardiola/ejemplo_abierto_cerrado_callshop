@@ -1,4 +1,4 @@
-package com.helloworld.callshop.rate.fixprice;
+package com.helloworld.callshop.rate.hourfixprice;
 
 import com.helloworld.callshop.rater.rate.Rate;
 import com.helloworld.callshop.rater.rate.factory.*;
@@ -14,7 +14,7 @@ public class HourFixPriceRateFactory implements RateFactory {
 
     private static final String DESCRIPTION = "Tarifa de precio fijo (establecimiento y precio por hora)";
 
-    private static final String ID = "FIX";
+    private static final String ID = "HOUR";
     private static final String CONNECT_FEE_NAME = "connectFee";
     private static final String HOUR_PRICE_NAME = "hourPrice";
 

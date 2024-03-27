@@ -1,4 +1,4 @@
-package com.helloworld.callshop.rate.fixprice;
+package com.helloworld.callshop.rate.hourfixprice;
 
 import com.helloworld.callshop.rater.rate.AbstractRate;
 import com.helloworld.callshop.rater.rate.Rate;
